@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "management.Course" table="course_management" lazy="true">
+      <id name = "courseId" type = "int" column="course_id"/>            
+      <property name = "title" column = "course_title" type = "string"/>
+      <property name = "duration" column = "course_duration" type = "int"/>
+      <property name = "provider" column = "course_provider" type = "string"/>
+      <property name = "cost" type = "double">
+      	<column name="course_cost"/>	
+      </property>     
+   </class>
+</hibernate-mapping>
